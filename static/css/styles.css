@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Achtergrondkleur voor body aangepast naar zwart */
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.chat-output {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: white; /* Achtergrondkleur voor chat-output aangepast naar wit */
+    max-height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.typing-indicator {
+    position: absolute;
+    left: 15px;
+    top: -25px;
+    font-size: 0.8rem;
+    color: #888;
+    display: none;
+}
+
+.message {
+    margin-bottom: 1.4rem;
+    position: relative;
+    border-radius: 15px;
+    padding: 10px 15px;
+    display: block;
+    max-width: 75%;
+    clear: both;
+}
+
+.message.bot {
+    background-color: rgb(222, 222, 222);
+    color: #187000;
+    border: 2px solid #187000;
+}
+
+.message.user {
+    color: #333;
+    text-align: right;
+    background-color: White; /* Achtergrondkleur voor gebruikersberichten aangepast naar oranje */
+    float: right;
+    border: 2px solid #FFA500;
+}
+
+.message.bot > .timestamp-bot,
+.message.user > .timestamp-user {
+    background-color: transparent;
+    padding: 0;
+}
+
+.message.bot > .timestamp-bot {
+    padding-left: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    padding: 1rem;
+    background-color: white; /* Achtergrondkleur voor chat-input aangepast naar wit */
+    border-top: 1px solid #d8d8d8;
+    flex-grow: 0; /* Aangepast om te voorkomen dat het invoerveld groeit */
+    max-height: 50px; /* Maximale hoogte van het invoerveld */
+}
+
+.chat-input input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-input button {
+    background-color: white; /* Achtergrondkleur voor knop aangepast naar groen */
+    color: #187000;
+    border: 2px solid #187000;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.timestamp-bot, .timestamp-user, .timestamp-greeting {
+    font-size: 0.75rem;
+    color: #888;
+    position: absolute;
+    bottom: -20px;
+}
+
+.timestamp-bot {
+    left: 0;
+}
+
+.timestamp-user {
+    right: 0;
+}
+
+.timestamp-greeting {
+    left: 0;
+}
+
+.warning-message {
+    background-color: #ffffcc; /* Gele achtergrond */
+    border: 1px solid #ffcc00; /* Oranje rand */
+    color: #333; /* Donkere tekst */
+    padding: 10px; /* Ruimte rond de tekst */
+    margin-bottom: 10px; /* Ruimte onder de boodschap */
+    font-size: 0.8rem; /* Verminder de grootte van het lettertype */
+}  
+
+#chatbot-typing {
+    color: #1a1a1a;
+    background-color: #187000; /* Achtergrondkleur voor botberichten aangepast naar groen */
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 1.4rem;
+    display: inline-block;
+    max-width: 75%;
+}
+
+@media screen and (max-width: 480px) {
+    .chat-container {
+        width: 90%;
+        max-width: none;
+    }
+    .chat-input {
+        flex-direction: column;
+    }
+
+    .chat-input input {
+        margin-bottom: 0.5rem;
+    }
+
+    .chat-input button {
+        width: 100%;
+    }
+}

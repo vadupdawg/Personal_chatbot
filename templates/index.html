@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="home">
+    <div class="chat-container">       
+        <div class="chat-output" id="chat-output">
+            <div class="warning-message" id="warning-message">
+                <strong>Let op:</strong> SwagBot is een experimentele chatbot en is nog in ontwikkeling. Het kan zijn dat de chatbot niet altijd goed reageert op uw vragen. Wij vragen u om hier rekening mee te houden.
+            </div>
+            <div class="message bot" id="greeting"><strong>GroeimetAI:</strong> Welkom bij onze geavanceerde ChatGPT-chatbot! Ik ben hier om u te assisteren met een breed scala aan vragen en taken. Aarzel niet om mij uit te proberen en ervaar zelf de mogelijkheden die ik u te bieden heb.<span class="timestamp-greeting" style="float: left;"></span></div>
+        </div>
+        <div class="chat-input">
+            <div class="typing-indicator" id="typing-indicator">GroeimetAI is typing...</div>
+            <input type="text" id="input-message" placeholder="Type your message here..." onkeydown="disableInput()" />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/js/chatbot.js"></script>
+</body>
+</html>
