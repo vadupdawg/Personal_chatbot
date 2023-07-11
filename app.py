@@ -14,15 +14,15 @@ def chat():
     user_message = request.json.get('user_message')
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
-        temperature=0.7,
+        temperature=0.0,
         messages=[
             {
                 "role": "system",
-                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots. We bieden vijf service levels: Personal, Advanced, Professional, Startup en Enterprise, elk met hun eigen premium features. Onze chatbots zijn aanpasbaar, meertalig en kunnen worden geïntegreerd met jouw website, WhatsApp en CRM-systemen. Probeer onze gratis demo of start een gesprek met ons via onze website."
+                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots. Hoe kan ik je helpen?"
             },
             {
                 "role": "user",
-                "content": "Focus op het delen van informatie over GroeimetAI's chatbot-oplossingen en de verschillende service levels. Als een vraag een gesprek vereist, stel dan voor om een gesprek te starten. Geef voorbeelden van hoe onze chatbots bedrijven kunnen ondersteunen. Het is de bedoeling dat jij de klant helpt om de juiste keuze te maken. echter weet jij niet alle informatie, de chatbots van de andere Service Levels vanaf Advanced wel."
+                "content": "Jij bent de chatbot voor GroeimetAi, je probeert ook met de klant te mee te denken wat zij nodig hebben, we bieden vijf service levels: 1. Personal, 2. Advanced, 3. Professional, 4. Startup en 5. Enterprise. vanaf de Advanced chatbot krijgt de chatbot lange termijn geheugen die deze kan gebruiken om klanten of bezoekers van de website beter te informeren."
             },
             {
                 "role": "assistant",
