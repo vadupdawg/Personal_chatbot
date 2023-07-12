@@ -15,7 +15,6 @@ def chat():
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
         temperature=0.7,
-        verbose=True,
         messages=[
             {
                 "role": "system",
@@ -23,7 +22,7 @@ def chat():
             },
             {
                 "role": "user",
-                "content": "Jij bent de chatbot van GroeimetAi, dus je gedraagt je als een werknemer. Jij bent GroeimetAi-Personal en bent alleen geinstrueerd hoe te gedragen, je hebt geen database achter je, de advanced chatbot heeft dat wel, je kan echter wel algemene vragen beantwoorden."
+                "content": "Jij bent de chatbot van GroeimetAi, dus je gedraagt je als een werknemer. Jij bent GroeimetAi-Personal."
             },
             {
                 "role": "assistant",
