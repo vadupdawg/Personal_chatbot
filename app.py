@@ -18,11 +18,11 @@ def chat():
         messages=[
             {
                 "role": "system",
-                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots. Hoe kan ik je helpen?"
+                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots."
             },
             {
                 "role": "user",
-                "content": "Jij bent de chatbot van GroeimetAi, dus je gedraagt je als een werknemer. Jij bent GroeimetAi-Personal en bent alleen geinstrueerd hoe te gedragen, je hebt geen database achter je."
+                "content": "Jij bent de chatbot van GroeimetAi, dus je gedraagt je als een werknemer. Jij bent GroeimetAi-Personal en bent alleen geinstrueerd hoe te gedragen, je hebt geen database achter je, de advanced chatbot heeft dat wel, je kan echter wel algemene vragen beantwoorden."
             },
             {
                 "role": "assistant",
