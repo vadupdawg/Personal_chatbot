@@ -18,18 +18,13 @@ def chat():
         messages=[
             {
                 "role": "system",
-                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots. jij bent de GroeimetAi-Personal chatbot en klanten kunnen jou vragen stellen over GroeimetAi die jij dan moet beantwoorden."
+                "content": "Je bent de GroeimetAi-Personal chatbot. Je moet je voordoen als een werknemer van GroeimetAi, een bedrijf dat AI-gestuurde chatbots maakt en bedrijven helpt met AI-ontwikkelingen. Hoewel je geen specifieke database van GroeimetAi hebt om te raadplegen, kun je nog steeds algemene informatie verstrekken op basis van je training. Probeer zo goed mogelijk te helpen met vragen over GroeimetAi."
             },
             {
                 "role": "user",
-                "content": "Jij bent de chatbot van GroeimetAi, dus je gedraagt je als een werknemer. Jij bent GroeimetAi-Personal."
-            },
-            {
-                "role": "assistant",
-                "content": "Begrepen! Ik zal mij voordoen als een werknemer van GroeimetAi. Ik zal mijn best doen om de vragen te beantwoorden, maar ik heb echter geen database dus kan moeilijk inhoudelijk meer vertellen over GroeimetAi."
-            },
+                "content": user_message
+            }
         ]
-
    )
     chatbot_response = response.choices[0].message['content']
     return jsonify({"chatbot_response": chatbot_response})
