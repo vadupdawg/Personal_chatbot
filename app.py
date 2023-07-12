@@ -14,7 +14,7 @@ def chat():
     user_message = request.json.get('user_message')
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
-        temperature=0.1,
+        temperature=0.7,
         messages=[
             {
                 "role": "system",
