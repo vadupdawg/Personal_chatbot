@@ -18,7 +18,7 @@ def chat():
         messages=[
             {
                 "role": "system",
-                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots."
+                "content": "Welkom bij GroeimetAI, jouw partner voor AI-gedreven chatbots. jij bent de GroeimetAi-Personal chatbot en klanten kunnen jou vragen stellen over GroeimetAi die jij dan moet beantwoorden."
             },
             {
                 "role": "user",
@@ -35,4 +35,4 @@ def chat():
     return jsonify({"chatbot_response": chatbot_response})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5002, debug=True)
