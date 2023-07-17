@@ -41,23 +41,14 @@ def chat():
     # Get the number of tokens used in the API call
     total_tokens = response['usage']['total_tokens']
 
-    # Estimate input tokens
-    input_tokens = len(openai.Tokenizer().tokenize(system_message + user_message))
-    output_tokens = total_tokens - input_tokens
-
-    # The cost per token
-    cost_per_input_token = 0.003 / 1000
-    cost_per_output_token = 0.004 / 1000
+    # Estimate the cost per token
+    cost_per_token = 0.004 / 1000 # since we cannot separate input/output, we will use the higher cost
 
     # Calculate the cost of the API call
-    cost_of_input = input_tokens * cost_per_input_token
-    cost_of_output = output_tokens * cost_per_output_token
-    total_cost = cost_of_input + cost_of_output
+    total_cost = total_tokens * cost_per_token
 
     # Print the token usage and cost to the console
-    print(f"Input tokens: {input_tokens}, Cost of input: ${cost_of_input:.5f}")
-    print(f"Output tokens: {output_tokens}, Cost of output: ${cost_of_output:.5f}")
-    print(f"Total cost of API call: ${total_cost:.5f}")
+    print(f"Total tokens: {total_tokens}, Total cost of API call: ${total_cost:.5f}")
 
     chatbot_response = response.choices[0].message['content']
     return jsonify({"chatbot_response": chatbot_response})
