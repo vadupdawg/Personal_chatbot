@@ -42,6 +42,15 @@ body {
     position: relative;
 }
 
+.char-counter {
+    position: absolute;
+    right: 10px;
+    bottom: -7px;
+    padding: 0.5rem;
+    font-size: 0.60rem;
+    color: #888;
+}
+
 .typing-indicator {
     position: absolute;
     left: 15px; /* of elke gewenste marge */
